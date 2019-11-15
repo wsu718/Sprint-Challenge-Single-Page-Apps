@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Axios from "axios";
 import CharacterCard from "./CharacterCard";
 import SearchForm from "./SearchForm";
+import { Row, Col } from "react-bootstrap"
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
@@ -27,15 +28,24 @@ export default function CharacterList() {
   }, []);
 
   return (
-    
-    <section className="character-list">
+    <section>
+    <Row className="justify-content-md-center">
       <SearchForm characters={characters} searchSetter={searchSetter}/>
-      <h2>
+    </Row>
+
+    <Row className="justify-content-md-center">      
+      
         {searchResults.map(character => {
-        return <CharacterCard 
-        key={character.name}
+        return <Col> <CharacterCard 
+        key={character.id}
         name={character.name}
-        />})}</h2>
+        status={character.status}
+        species={character.species}
+        gender={character.gender}
+        image={character.image}
+        /></Col>})}
+      
+    </Row>
     </section>
   );
 }

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Form } from "react-bootstrap"
 
 export default function SearchForm(props) {
  
@@ -8,7 +9,7 @@ export default function SearchForm(props) {
     const results = props.characters.filter(character =>
       character.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
-    props.searchSetter(results);
+    props.searchSetter(results)
   }, [searchTerm]);
 
   const handleChange = event => {
@@ -18,17 +19,19 @@ export default function SearchForm(props) {
   return (
 <section className="search-form">
  
- <form>
-        <label htmlFor="name">Search:</label>
-        <input
-          id="name"
-          type="text"
-          name="textfield"
-          placeholder="Search"
-          value={searchTerm}
-          onChange={handleChange}
-        />
-      </form>
+    <Form>
+      <Form.Group>
+        <Form.Label>Search by Character Name</Form.Label>
+        <Form.Control type="text" placeholder="Enter name" value id="name" name="textfield" value={searchTerm}
+          onChange={handleChange}/>
+        <Form.Text className="text-muted">
+          Search will begin as you type
+        </Form.Text>
+      </Form.Group>
+    </Form>
+
+
+ 
 
     </section>
   );
