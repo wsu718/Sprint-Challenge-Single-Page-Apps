@@ -1,0 +1,22 @@
+
+nav ul {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav ul li {
+    width: 25%;
+    background-color: darkblue;
+    text-align: center;
+    padding: 2%;
+    font-weight: 600;
+    list-style: none;
+}
+
+li a {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+

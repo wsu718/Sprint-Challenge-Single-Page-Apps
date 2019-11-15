@@ -37,3 +37,11 @@ main {
 header h1 {
   text-align: center;
 }
+
+.search-form {
+  margin: 5%;
+}
+
+.card {
+  margin-top: 10%;
+}
