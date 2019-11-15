@@ -27,6 +27,9 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
+Client side routing allows for richer and more interactive user experiences. In separating the application into components, and storing state appropriately, the user can interact with individual pieces of the application. These pieces can store state and react to the user in ways that server side routing cannot.
+
+
 > Answer:
 
 ## Project Set Up
